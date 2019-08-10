@@ -5,7 +5,7 @@ services:
 before_install:
   - docker build -t ajay291491/react-test -f ./client/Dockerfile.dev ./client
 
-scripts:
+script:
   - docker run -e CI=true ajay291491/react-test npm test -- --coverage
 
 after_success:
